@@ -32,13 +32,19 @@ class _AddNamePageState extends State<AddNamePage> {
             ),
           ),
 
+          SizedBox(
+            height: 10,
+          ),
           ElevatedButton(onPressed: () async {
+            
             await addPeople(nameController.text).then((value) {
               Navigator.pop(context);
             });
             
             
-          }, child: const Text('Guardar'))
+          }, child: const Text('Guardar', style: TextStyle(color: Color.fromARGB(255, 30, 63, 120)),)
+          
+          )
 
 
         ],
